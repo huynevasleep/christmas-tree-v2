@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Ngôi sao -->
+  <polygon points="50,10 53,20 63,20 55,27 58,37 50,30 42,37 45,27 37,20 47,20" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+  
+  <!-- Cây thông -->
+  <polygon points="50,25 65,45 60,45 73,60 68,60 80,75 20,75 32,60 27,60 40,45 35,45" fill="#0B6623" stroke="#085820" stroke-width="1"/>
+  
+  <!-- Thân cây -->
+  <rect x="45" y="75" width="10" height="15" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Đèn trang trí -->
+  <circle cx="50" cy="35" r="2" fill="#FF0000"/>
+  <circle cx="42" cy="40" r="2" fill="#FFD700"/>
+  <circle cx="58" cy="40" r="2" fill="#4169E1"/>
+  <circle cx="38" cy="50" r="2" fill="#FF69B4"/>
+  <circle cx="50" cy="48" r="2" fill="#00FF00"/>
+  <circle cx="62" cy="50" r="2" fill="#FF0000"/>
+  <circle cx="35" cy="62" r="2" fill="#FFD700"/>
+  <circle cx="50" cy="60" r="2" fill="#4169E1"/>
+  <circle cx="65" cy="62" r="2" fill="#FF69B4"/>
+  <circle cx="30" cy="72" r="2" fill="#00FF00"/>
+  <circle cx="45" cy="70" r="2" fill="#FF0000"/>
+  <circle cx="55" cy="70" r="2" fill="#FFD700"/>
+  <circle cx="70" cy="72" r="2" fill="#4169E1"/>
+</svg>
+

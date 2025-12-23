@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap');
+
+.greeting-card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 14, 39, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+/* Thiệp đơn giản - hiển thị trực tiếp */
+.greeting-card-simple {
+  width: 700px;
+  max-width: 90vw;
+  height: auto;
+  background: linear-gradient(135deg, 
+    #f8f6f0 0%,
+    #fdfbf7 50%,
+    #f5f3ed 100%
+  );
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  padding: 50px 60px;
+  box-shadow: 
+    0 25px 80px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 0 0 3px #DAA520;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Texture giấy */
+.card-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 69, 19, 0.015) 2px,
+      rgba(139, 69, 19, 0.015) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 69, 19, 0.015) 2px,
+      rgba(139, 69, 19, 0.015) 4px
+    );
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Nội dung thiệp */
+.card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #2c1810;
+  position: relative;
+  z-index: 1;
+}
+
+.ornament-top,
+.ornament-bottom {
+  text-align: center;
+  font-size: 1.5em;
+  color: #DAA520;
+  opacity: 0.6;
+  letter-spacing: 8px;
+}
+
+.card-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8em;
+  color: #8B4513;
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.1);
+  line-height: 1;
+}
+
+.card-message {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15em;
+  line-height: 1.8;
+  color: #3d2817;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.card-message p {
+  margin: 4px 0;
+}
+
+.greeting-intro {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.4em;
+  color: #8B4513;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+
+.card-message .blessing {
+  margin-top: 10px;
+  font-size: 1em;
+  line-height: 1.75;
+  font-style: normal;
+  font-weight: 500;
+  color: #2c1810;
+}
+
+.signature {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signature-line {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;
+  color: #A0522D;
+  margin-bottom: 5px;
+}
+
+.signature-year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1em;
+  color: #8B4513;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+/* Tuyết rơi */
+.card-snow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.snow-particle {
+  position: absolute;
+  top: -20px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.2em;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .greeting-card-simple {
+    width: 600px;
+    padding: 45px 50px;
+  }
+  
+  .card-title {
+    font-size: 2.5em;
+  }
+  
+  .card-message {
+    font-size: 1.05em;
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting-card-simple {
+    width: 88vw;
+    padding: 35px 40px;
+  }
+
+  .card-title {
+    font-size: 2.2em;
+    margin: 15px 0;
+  }
+
+  .card-message {
+    font-size: 0.95em;
+  }
+
+  .card-message .blessing {
+    font-size: 0.9em;
+  }
+
+  .signature-line {
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting-card-simple {
+    width: 92vw;
+    padding: 30px 25px;
+    border-radius: 12px;
+  }
+
+  .card-title {
+    font-size: 1.8em;
+    margin: 10px 0;
+  }
+
+  .card-message {
+    font-size: 0.85em;
+    line-height: 1.6;
+  }
+
+  .card-message p {
+    margin: 3px 0;
+  }
+
+  .greeting-intro {
+    font-size: 1.2em;
+    margin-bottom: 3px;
+  }
+
+  .card-message .blessing {
+    font-size: 0.78em;
+    margin-top: 8px;
+    line-height: 1.65;
+  }
+
+  .signature-line {
+    font-size: 1.5em;
+  }
+
+  .signature-year {
+    font-size: 1em;
+  }
+
+  .ornament-top,
+  .ornament-bottom {
+    font-size: 1.2em;
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-height: 800px) {
+  .greeting-card-simple {
+    padding: 35px 45px;
+  }
+
+  .card-title {
+    font-size: 2.3em;
+  }
+
+  .card-message {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-height: 700px) {
+  .greeting-card-simple {
+    padding: 30px 35px;
+  }
+
+  .card-title {
+    font-size: 2em;
+  }
+
+  .card-message {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-height: 600px) {
+  .greeting-card-simple {
+    padding: 25px 30px;
+  }
+
+  .card-title {
+    font-size: 1.7em;
+    margin: 8px 0;
+  }
+
+  .card-message {
+    font-size: 0.8em;
+    line-height: 1.5;
+  }
+
+  .card-message p {
+    margin: 2px 0;
+  }
+
+  .ornament-top,
+  .ornament-bottom {
+    font-size: 1em;
+  }
+}
+
