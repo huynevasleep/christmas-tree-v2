@@ -103,7 +103,7 @@ const GreetingCard = ({ show }) => {
                 animate="visible"
               >
                 <p className="greeting-intro">
-                  Gửi đến cô gái luôn rạng rỡ,
+                  Dear Nhã Hân,
                 </p>
                 <br/>
                 <p className="blessing">
